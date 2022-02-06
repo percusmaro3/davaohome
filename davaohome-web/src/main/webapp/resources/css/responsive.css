@@ -1,0 +1,119 @@
+@media(max-width:780px){
+    /*한국어,영어*/
+    .language_btn>span>a{font-size:12px}
+    /*common*/
+    .logo{height:90px; padding-top:}
+    .logo>a{padding-top:30px}
+    .logo>a>img{width:180px;}
+    .gnb{display:none;}
+    .mobile_menu_btn{display:block;}
+
+   
+    
+    /* 타이틀 폰트 */
+    /*타이틀*/
+   .main_title{font-size:26px; padding-top:8px; padding-bottom:6px}
+   .sub_title{font-size:20px;margin-bottom:5px;}
+   .sub_title_center{font-size:20px;margin-bottom:5px;}
+   .sub_title2{font-size:16px; margin-bottom:5px;}
+   .sub_text{font-size:12px; margin-bottom:5px; line-height:16px}
+   .sub_text_center{font-size:12px; margin-bottom:5px; line-height:16px}
+    .sub_text_bold{font-size:12px;  margin-bottom:5px; line-height:16px;
+font-weight:bold}
+    
+    /*서브페이지 공통*/
+    .main{padding-top:20px}
+    .page_tit{max-width:1200px; padding-top:40px}
+    .page_tit>p{font-size:26px;}
+    .sub_tit{font-size:16px; }
+    .cont_list>ul>li{font-size:12px}
+    .table_text{margin-bottom:20px; font-size:10px}
+    
+
+     .guide_btn{padding:12px 0; font-size:12px}
+    /*부동산,새소식 btn*/
+    .cont_btn{padding:7px 0;margin-top:5px;}
+    .cont_btn>a{font-size:12px;}
+    /*주황색버튼*/
+    .cont_btn2{width:180px; padding:7px 0; margin-top:5px}
+    .cont_btn2>a{font-size:12px;}
+    
+    /*tab*/
+    .tab_cont_wrap{margin:30px 0;}
+    .tab_cont_in>div{border-bottom: 10px solid #e66900;}
+    .tab>li{padding:7px 0}
+    .tit_line{width:50px;}/* 네이비 라인 */
+    .subtit_line{width:30px; margin-bottom:5px}/* 주황색 라인*/
+  
+    /*표*/
+   .table_tit{width:100%; padding:5px 0; margin-top:10px; font-size:12px;}
+   .table_cont>li{padding:5px 0; font-size:12px;}
+   .table_bottom{font-size:9px;}
+    
+    /* home */
+   .home>div{padding:40px 0}
+    
+    /*************새소식**************/
+   .news_table{padding:0px; margin-top:20px; margin-bottom:25px;}
+   .news_table>ul{width:95%; padding:0px; margin:0 auto;}
+   .news_table>ul>li{padding:7px 0;  font-size:12px;}
+   .news_date{width:35%;}
+   .news_tit{width:65%;}
+    
+    /*부동산 소개*/
+    .introduce>ul{padding-bottom:20px; padding-top:10px}
+    .introduce>ul>li{float:none; width:90%; padding-bottom:15px; margin:0 auto}
+    .introduce>ul>li:first-child>a{text-align:center}
+    .introduce>ul>li:last-child{width:90%; margin: 0 auto;}
+    .introduce>ul>li:first-child{width:90%; margin: 0 auto;}
+    .high{padding:12px 0!important}
+
+    /*가이드 배너*/
+    .guide_banner_wrap{margin:10px 0;}
+    .guide_banner>ul>li:first-child{width:90%; border-right:0px; border-bottom:1px solid #ebe4cf;}
+    .guide_banner>ul>li{float:none; width:90%; margin:0 auto;}
+    .guide_banner>ul>li *{text-align:center !important;}
+    
+    /*부동산 list01*/
+    .cont01{padding:20px 0}
+    .list{padding-bottom: 30px; padding-top:30px}
+    .list>ul{padding-bottom:50px;}
+    .list>ul>li{width:80%}
+    .inner_floor>li>img, .inner_floor2>li>img, .inner_pciture2>li>img{width:80%;}
+
+    /*제휴 건설사*/
+    .partner_wrap{padding:20px 0;}
+    .partner_wrap>ul{padding:15px 0;}
+    .partner_wrap>ul>li{float:none; padding:0px;}
+    .partner_logo{width:80%; margin:0 auto;}
+    .partner_logo>img{width:35%; margin:0 auto; min-width:164px;}
+    .partner_intro{width:80%; margin:0 auto; text-align:center; padding-top:5px;}
+
+    /*현지안내*/
+   .davao{padding-bottom: 30px; padding-top:30px;}
+   .davao_cont{width:100%; overflow:hidden}
+   .davao_cont_list{float:left; width:50%; height:420px}
+   .davao_cont_list>li:first-child{width:95%; float:none; margin:0 auto}
+   .davao_cont_list>li:last-child{width:95%; float:none; margin:0 auto}
+
+   .davao_trip_list>li{width:50%; float:left; margin-bottom:15px; height:380px}
+   .davao_trip_list2>li{width:50%; float:left; margin-bottom:15px; height:300px}
+    .sys_pic>li{width:50%; float:left; text-align:center}
+
+   .lan_list>li:first-child{width:40%; float:left;}
+   .lan_list>li:last-child{width:57%; margin-left:3%; float:left;}
+    .thin2{letter-spacing:-1.5px}
+    
+    /*performance*/
+    .pt_table{margin:5px 0;}
+    .pt_table_tit{width:100%; padding:5px 0; font-size:12px;}
+    .pt_cont>li{padding:5px 0; font-size:12px;}
+
+    /*footer*/
+    .footer>ul>li{float:none;}
+    .footer>ul>li:first-child{width:100%; padding-top:0px}
+    .footer>ul>li:last-child{width:100%; text-align:center; padding-top:5px}
+    .footer_cont>h4{font-size:11px;}
+    .footer_cont>p{font-size:9px;}
+
+}

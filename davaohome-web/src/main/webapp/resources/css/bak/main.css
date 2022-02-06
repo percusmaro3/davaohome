@@ -1,0 +1,324 @@
+#mainVisual{
+	width:1920px;
+	position:relative;
+	left:50%;
+	margin-left:-960px;
+	height:100%;
+	overflow:hidden;
+	min-width:1180px;
+	overflow-x:hidden;
+
+}
+
+#mainVisual .inner{
+	width:100%;
+	position:absolute;
+	height:100%;
+}
+
+
+#mainVisual .inner li .bg img{
+	width:150%;
+}
+
+#mainVisual .inner li .bg{
+	width:100%;
+}
+
+#mainVisual .inner li .cont{
+	width:1180px;
+	position:absolute;
+	left:50%;
+	margin-left:-590px;
+	z-index:9;
+	text-align:Center;
+	top:15%;
+
+}
+
+#mainVisual .inner li .cont .graph{
+	width:49%;
+	display:inline-block;
+}
+
+#mainVisual .inner li .cont .textArea{
+	width:49%;
+	display:inline-block;
+	text-align:Right;
+}
+
+#mainVisual .inner li .cont .textArea .subject{
+	font-size:55px;
+	letter-spacing:10px;
+	color:#fff;
+}
+
+
+#mainVisual .inner li .cont .textArea .subject span{
+	color:#fff836;
+}
+
+#mainVisual .inner li .cont .textArea .subs{
+	font-size:24px;
+	color:#fff;
+	font-weight:300;
+	margin-top:20px;
+	line-height:32px;
+}
+
+
+
+#mainVisual .inner li .cont .textArea-2nd{
+	width:100%;
+
+}
+
+
+
+
+
+
+
+
+
+#shortcut{
+	width:100%;
+}
+
+#shortcut ul{
+	width:100%;
+	display:flex;
+	position:absolute;
+	height:100%;
+}
+
+
+#shortcut ul li{
+	width:100%;
+	display:inline-block;
+	position:relative;
+}
+
+
+
+#shortcut ul li .bg{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+
+#shortcut ul li .bg img{
+	width:170%;
+}
+
+
+#shortcut ul li .textArea{
+	width:100%;
+	padding:10em 2em;
+	box-sizing:border-box;
+	position:absolute;
+}
+
+#shortcut ul li .textArea .title{
+	font-size:30px;
+	color:#36e5ff;
+}
+
+
+#shortcut ul li .textArea .title a{
+	color:#36e5ff;
+}
+
+#shortcut ul li .textArea .line{
+	width:70px;
+	height:1px;
+	background:rgba(255,255,255,0.5);
+	margin:15px 0px;
+}
+
+#shortcut ul li .textArea .subject{
+	font-size:24px;
+	color:#fff;
+}
+
+#shortcut ul li .textArea .substance{
+	font-size:16px;
+	color:#fff;
+	font-weight:300;
+	margin-top:15px;
+	line-height:24px;
+}
+
+#network{
+	width:1920px;
+	position:relative;
+	left:50%;
+	margin-left:-960px;
+	min-width:1180px;
+	overflow-x:hidden;
+}
+
+
+#network .inner{
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden;
+}
+
+#network .inner .bg{
+	width:100%;
+}
+
+#network .inner .bg .background{
+	width:100%;
+}
+
+
+#network .inner .bg .background img{
+	width:100%;
+}
+
+
+
+
+#network .inner .cont{
+	width:94%;
+	position:absolute;
+	left:50%;
+	margin-left:-47%;
+	top:15%;
+}
+
+
+
+#network .wordmap{
+	width:70%;
+	position:absolute;
+	left:50%;
+	margin-left:-35%;
+	bottom:3%;
+}
+
+
+#network .wordmap img{
+	width:100%;
+}
+
+
+
+.mainTitle{
+	width:100%:
+}
+
+.mainTitle .title{
+	text-align:Center;
+	color:#fff;
+	font-size:46px;
+}
+
+.mainTitle .substance{
+	text-align:Center;
+	color:#fff;
+	font-size:26px;
+	margin-top:20px;
+	font-weight:300;
+}
+
+
+
+
+
+
+#news{
+	width:1920px;
+	position:relative;
+	left:50%;
+	margin-left:-960px;
+}
+
+
+#news .inner{
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden;
+}
+
+#news .inner .bg{
+	width:100%;
+}
+
+#news .inner .bg img{
+	width:100%;
+
+}
+
+#news .inner .cont{
+	width:1180px;
+	position:absolute;
+	left:50%;
+	margin-left:-590px;
+	top:15%;
+}
+
+#news .inner .cont .newsList{
+	width:100%;
+	margin-top:50px;
+	text-align:center;
+}
+
+
+#news .inner .cont .newsList li{
+	width:23%;
+	display:inline-block;
+	vertical-align:top;
+	background:Rgba(0,0,0,0.2);
+	margin:0px 10px;
+	box-sizing:Border-box;
+}
+
+#news .inner .cont .newsList li .category{
+	font-size:30px;
+	text-align:left;
+	padding:2em 1em 0px;
+	box-sizing:border-box;
+}
+
+#news .inner .cont .newsList li .subject{
+	font-size:24px;
+	color:#fff;
+	margin-top:10px;
+	text-align:left;
+	font-weight:300;
+	width:100%;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	padding:0em 1em 0em;
+	box-sizing:border-box;
+}
+
+#news .inner .cont .newsList li .contText{
+	font-size:16px;
+	color:#fff;
+	margin-top:20px;
+	text-align:left;
+	font-weight:300;
+	line-height:24px;
+	padding:0em 1em 0em;
+	box-sizing:border-box;
+}
+
+#news .inner .cont .newsList li .date{
+	font-size:16px;
+	color:#fff;
+	margin-top:30px;
+	text-align:left;
+	font-weight:300;
+	line-height:24px;
+	padding:0em 1em 2em;
+	box-sizing:border-box;
+}
+

@@ -1,0 +1,54 @@
+
+.menuDrop{
+	width:100%;
+	position:absolute;
+	display:none;
+	z-index:999;
+}
+
+.menuDrop .inner{
+	width:1180px;
+	margin:0 auto;
+}
+
+
+
+.menuDrop .dropCont{
+	width:630px;
+	left:50%;
+	margin-left:400px;
+	display:flex;
+	background:rgba(190,60,60,0.7);
+	margin-top:10px;
+	padding-top:65px;
+}
+
+
+.menuDrop .inner ul{
+	width:158px;
+	display:inline-block;
+	border-right:1px solid #e5e5e5;
+	padding:15px 20px;
+	box-sizing:border-box;
+}
+
+.menuDrop .inner ul:last-child{
+	border-right:0px solid #e5e5e5;
+}
+
+.menuDrop .inner ul li{
+	font-size:15px;
+	margin:10px 0px;
+	text-align:left;
+}
+
+
+.menuDrop .inner ul li a{
+	color:#fff;
+}
+
+.menuDrop .inner ul li a:hover{
+	color:#ffdf7e;
+	border-left:2px solid #ffdf7e;
+	padding-left:5px;
+}

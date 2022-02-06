@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="adminMember">
+
+    <insert id="insertAdminMember" parameterType="com.davaohome.bo.model.admin.AdminMember">
+		INSERT INTO adminMember (adminMemberId, countryId, partnerNo, adminMemberType, password, activeYn, registerDate, updateDate, lastUpdater)
+		VALUES (
+			#{adminMemberId}, #{countryId}, #{partnerNo}, #{adminMemberType}, #{password}, 'Y', #{now}, #{now}, #{lastUpdater}
+		)
+	</insert>
+
+    <update id="updateAdminMember">
+		UPDATE adminMember
+		SET
+			password = #{password},
+			partnerNo = #{partnerNo},
+			countryId = #{countryId},
+			adminMemberType = #{adminMemberType},
+			activeYn = #{activeYn},
+			updateDate = #{now},
+			lastUpdater = #{lastUpdater}
+		WHERE
+			adminMemberId = #{adminMemberId}
+	</update>
+
+    <update id="updateAdminMemberWithNoPassword">
+        UPDATE adminMember
+        SET
+        partnerNo = #{partnerNo},
+        countryId = #{countryId},
+        adminMemberType = #{adminMemberType},
+        activeYn = #{activeYn},
+        updateDate = #{now},
+        lastUpdater = #{lastUpdater}
+        WHERE
+        adminMemberId = #{adminMemberId}
+    </update>
+
+    <select id="getAdminMember" parameterType="java.lang.String" resultType="com.davaohome.bo.model.admin.AdminMember">
+		SELECT *
+		FROM adminMember a
+		WHERE adminMemberId = #{adminMemberId}
+	</select>
+
+    <select id="checkLogin" parameterType="java.lang.String" resultType="com.davaohome.bo.model.admin.AdminMember">
+		SELECT a.*
+		FROM adminMember a
+		WHERE a.adminMemberId = #{id} AND a.password = #{password}
+	</select>
+
+    <sql id="searchCondition">
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(adminMemberId)">
+            AND a.adminMemberId LIKE '%${adminMemberId}%'
+        </if>
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(countryId)">
+            AND a.countryId = #{countryId}
+        </if>
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(partnerNo)">
+            AND a.partnerNo = #{partnerNo}
+        </if>
+    </sql>
+
+    <select id="getAdminMemberList" resultType="com.davaohome.bo.model.admin.AdminMember">
+        SELECT a.*
+        FROM adminMember a
+        WHERE 1=1
+        <include refid="searchCondition"/>
+
+        ORDER BY updateDate DESC
+        <if test="fetchCount != null">
+            LIMIT #{startRowIndex}, #{fetchCount}
+        </if>
+    </select>
+
+    <select id="getAdminMemberListCount" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM adminMember a
+        WHERE 1=1
+        <include refid="searchCondition"/>
+    </select>
+
+
+</mapper>

@@ -1,0 +1,60 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{padding:0; margin:0;}
+body{margin:0 auto; font-family: "Nanum Gothic", sans-serif;}
+a{text-decoration:none;}
+img{border:0;}
+ul{list-style:none;}
+body *:not(.scroll_image>img){transition-property:all; transition-duration:1s;
+font-size:18px; color:#042e47}
+
+/*공통-타이틀*/
+
+.table_text{font-size:12px; color:#042e47;text-align:left;}
+.small_text{font-size:12px; color:#042e47;}
+.emp{color:#e66900; font-weight:bold;}
+
+.main{width:100%}
+
+/**************강점************/
+.stren_cont{width:100%; max-width:1200px; margin:0 auto; padding:10px 0;}
+.stren_cont_top{margin-top:50px}
+
+
+/**************새소식************/
+.news_table{max-width:1200px; width:100%; margin:0 auto; padding:40px 0;}
+.news_table>ul{width:90%; overflow:hidden; margin: 0 auto; text-align:left; padding-left:20px}
+.news_table>ul>li{float:left; border-bottom:1px solid #dfe7eb; padding:7px 0; color:#042e47; font-size:14px;}
+.news_date{width:35%; text-align:center;}
+.news_tit{width:65%; font-weight:bold; cursor:pointer}
+
+.page_btn_wrap{width:100%; max-width:1200px; padding-top:10px}
+.page_btn{width:90%; margin:0 auto}
+.page_btn>span{padding:0 5px; color:#707578; font-size:12px; cursor:pointer}
+.page_btn>span:first-child{color:#042e47}
+
+
+/**************회사소개************/
+.company_table{max-width:1000px; width:100%; margin:40px auto; border-top:3px solid #f4f7f8; border-bottom:3px solid #f4f7f8;}
+.c_table_cont{overflow:hidden; border-bottom:1px solid #f4f7f8;}
+.c_table_cont>div{float:left; padding:10px 0; }
+
+.c_title{width:30%; background:#f4f7f8; color:#042e47; text-align:center; font-size:14px; font-weight:bold; }
+.c_cont{width:68%; margin-left:2%; color:#042e47; font-size:14px; text-align:left;}
+
+#line_4{padding:50px 0}
+#line_2{padding:20px 0}
+
+/**************문의사항************/
+.question{max-width:1200px; width:100%; margin:40px auto; }
+.question_table{border-top:3px solid #f4f7f8; border-bottom:3px solid #f4f7f8; margin:10px 0}
+.q_table_cont{overflow:hidden; border-bottom:1px solid #f4f7f8;}
+.q_table_cont>div{ float:left;  }
+
+.q_title{width:30%; background:#f4f7f8; color:#042e47; text-align:center; font-size:14px; font-weight:bold; padding:15px 0; }
+.q_cont{width:68%; margin-left:2%; color:#042e47; font-size:14px; text-align:left; padding:5px 0;}
+.q_cont>input{width:97%; height:25px; border:1px solid #f4f7f8;}
+#question_cont{height:100px; overflow:scorll; }
+#line_high{padding:48px 0}
+
+.sub_sub_title label input{margin-right:7px; margin-top:3px}
+

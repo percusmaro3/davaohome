@@ -1,0 +1,19 @@
+
+<configuration>
+	
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{yyyyMMdd HH:mm:ss} [%-5p] %C.%M:%L : %ex{full}%m%n</pattern>
+			<!-- <pattern>[%-5p] %C.%M:%L : %ex{full}%m%n</pattern> -->
+		</encoder>
+	</appender>
+	
+	<logger name="org.springframework" level="DEBUG" />
+	<logger name="org.springframework.beans.factory.support.DisposableBeanAdapter" level="ERROR" />
+	
+	<root level="DEBUG">
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+</configuration>
+

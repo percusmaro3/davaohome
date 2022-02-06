@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="notice">
+
+    <insert id="insertNotice" parameterType="com.davaohome.bo.model.notice.Notice">
+        INSERT INTO notice (activeYn, registerDate, updateDate, lastUpdater)
+        VALUES ( #{activeYn}, #{now}, #{now}, #{lastUpdater} )
+        <selectKey keyProperty="noticeNo" resultType="java.lang.Integer">
+            SELECT last_insert_id();
+        </selectKey>
+    </insert>
+
+    <insert id="insertNoticeContents" parameterType="com.davaohome.bo.model.notice.NoticeContents">
+        INSERT INTO noticeContents (noticeNo, language, title, content)
+        VALUES (
+        #{noticeNo}, #{language}, #{title}, #{content}
+        )
+    </insert>
+
+    <delete id="deleteNoticeContents" parameterType="java.lang.Integer">
+        DELETE FROM noticeContents
+        WHERE noticeNo = #{noticeNo}
+    </delete>
+
+    <update id="updateNotice" parameterType="com.davaohome.bo.model.notice.Notice">
+        UPDATE notice
+        SET
+        activeYn = #{activeYn},
+        updateDate = #{now},
+        lastUpdater = #{lastUpdater}
+        WHERE
+        noticeNo = #{noticeNo}
+    </update>
+
+    <update id="updateNoticeCountryContents" parameterType="com.davaohome.bo.model.notice.NoticeContents">
+        UPDATE noticeContents
+        SET
+        language = #{language},
+        title = #{title},
+        content = #{content}
+        WHERE
+        noticeNo = #{noticeNo}
+    </update>
+
+    <select id="getNotice" parameterType="java.lang.Integer" resultType="com.davaohome.bo.model.notice.Notice">
+        SELECT *
+        FROM notice
+        WHERE noticeNo = #{noticeNo}
+    </select>
+
+    <select id="getNoticeContents" parameterType="java.lang.Integer" resultType="com.davaohome.bo.model.notice.NoticeContents">
+        SELECT *
+        FROM noticeContents
+        WHERE noticeNo = #{noticeNo}
+    </select>
+
+    <select id="getNoticeWithLanguage" resultType="com.davaohome.bo.model.notice.NoticeSingleContents">
+        SELECT *
+        FROM notice a, noticeContents b
+        WHERE a.noticeNo = b.noticeNo AND a.noticeNo = #{noticeNo}
+        AND b.language = #{language}
+    </select>
+
+    <select id="getNoticeList" parameterType="com.davaohome.bo.model.notice.NoticeSearchParam"
+            resultType="com.davaohome.bo.model.notice.NoticeSingleContents">
+        SELECT a.*, b.*
+        FROM notice a, noticeContents b
+        WHERE a.noticeNo = b.noticeNo
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(language)">
+            AND b.language = #{language}
+        </if>
+        ORDER BY a.updateDate DESC
+        <if test="fetchCount != null">
+            LIMIT #{startRowIndex}, #{fetchCount}
+        </if>
+    </select>
+
+    <select id="getNoticeListCount" parameterType="com.davaohome.bo.model.notice.NoticeSearchParam" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM notice a, noticeContents b
+        WHERE a.noticeNo = b.noticeNo
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(language)">
+            AND b.language = #{language}
+        </if>
+    </select>
+
+
+</mapper>

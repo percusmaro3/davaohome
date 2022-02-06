@@ -1,0 +1,36 @@
+<configuration>
+
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyyMMdd HH:mm:ss} [%-5p] %C.%M:%L : %ex{full}%m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SOCKET" class="ch.qos.logback.classic.net.SocketAppender">
+        <RemoteHost>10.161.223.97</RemoteHost>
+        <Port>7201</Port>
+        <reconnectionDelay>10000</reconnectionDelay>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <!--<appender name="NULL" class="com.wisehome.basebo.log.NullAppender">-->
+    <!--</appender>-->
+
+    <logger name="org.springframework.beans.factory.support.DisposableBeanAdapter" level="ERROR"/>
+    <logger name="org.springframework" level="DEBUG"/>
+    <logger name="net.rubyeye" level="INFO"/>
+    <logger name="net.sf" level="INFO"/>
+    <logger name="com.google" level="INFO"/>
+    <logger name="org.mybatis" level="INFO"/>
+    <logger name="org.apache.http" level="INFO"/>
+    <logger name="org.apache.ibatis.logging.jdbc.BaseJdbcLogger" level="DEBUG"/>
+    <!--<logger name="com.nhncorp.lucy.spring.db.mybatis.plugin.BindingLogPlugin" level="DEBUG"/>-->
+
+    <root level="${log.level.default}">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="${log.appender.socket}"/>
+    </root>
+
+</configuration>
+

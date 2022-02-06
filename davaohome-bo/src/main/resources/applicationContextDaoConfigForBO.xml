@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+	   http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+
+    <!-- Transaction manager for a single JDBC DataSource -->
+    <!--  Master  -->
+    <bean id="transactionManagerForBO" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="masterDataSourceForBO"/>
+    </bean>
+
+    <bean id="masterSqlSessionFactoryForBO" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="masterDataSourceForBO"></property>
+        <!-- com 빼면 절대 안됨. 버그... -->
+        <property name="mapperLocations" value="classpath*:com/davaohome/**/*SqlMap.xml"/>
+        <property name="configLocation" value="classpath:datasource/sqlMapConfigForBO.xml"/>
+
+        <!--<property name="plugins">-->
+            <!--<list>-->
+                <!--<bean class="com.nhncorp.lucy.spring.db.mybatis.plugin.BindingLogPlugin"/>-->
+                <!--<bean class="com.nhncorp.lucy.spring.db.mybatis.plugin.SlowQueryPlugin">-->
+                    <!--<property name="slowQueryTime" value="#{config['slowquery.timeout.millisec']}"></property>-->
+                <!--</bean>-->
+                <!--<bean class="com.nhncorp.lucy.spring.db.mybatis.plugin.StatementIdAppenderPlugin"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    </bean>
+
+    <bean id="masterSqlSessionTemplateForBO" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="masterSqlSessionFactoryForBO"></constructor-arg>
+    </bean>
+
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManagerForBO"/>
+
+</beans>

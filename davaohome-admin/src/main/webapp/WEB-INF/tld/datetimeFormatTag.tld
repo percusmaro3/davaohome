@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>cnv</short-name>
+    <uri>http://admin.gg-trip.com</uri>
+
+    <function>
+        <name>date</name>
+        <function-class>com.davaohome.admin.util.DatetimeUtil</function-class>
+        <function-signature>java.lang.String convertToDateString(java.lang.Long, java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>datetime</name>
+        <function-class>com.davaohome.admin.util.DatetimeUtil</function-class>
+        <function-signature>java.lang.String convertToDatetimeString(java.lang.Long, java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>dateByDate</name>
+        <function-class>com.davaohome.admin.util.DatetimeUtil</function-class>
+        <function-signature>java.lang.String convertToDateString(java.util.Date, java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>datetimeByDate</name>
+        <function-class>com.davaohome.admin.util.DatetimeUtil</function-class>
+        <function-signature>java.lang.String convertToDatetimeString(java.util.Date, java.lang.String)</function-signature>
+    </function>
+
+</taglib>
+

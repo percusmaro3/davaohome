@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="masterDataSourceForBO" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="#{config['mysql.master.jdbc.url']}#{config['master.connection.timetout']}"/>
+        <property name="username" value="#{config['mysql.master.jdbc.username']}"/>
+        <property name="password" value="#{config['mysql.master.jdbc.password']}"/>
+        <property name="initialSize" value="#{config['master.initialSize']}"/>
+        <property name="maxActive" value="#{config['master.maxActive']}"/>
+        <property name="maxIdle" value="#{config['master.maxIdle']}"/>
+        <property name="minIdle" value="#{config['master.minIdle']}"/>
+        <property name="validationQuery" value="select 1"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="timeBetweenEvictionRunsMillis" value="1800000"/>
+        <property name="numTestsPerEvictionRun" value="5"/>
+        <property name="minEvictableIdleTimeMillis" value="1"/>
+    </bean>
+
+</beans>

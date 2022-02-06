@@ -1,0 +1,34 @@
+<configuration>
+    <!-- Profile를 출력하고 싶지 않을 경우에는 제거 -->
+    <!-- <turboFilter class="ch.qos.logback.classic.turbo.MarkerFilter">
+        <Marker>PROFILER</Marker>
+        <OnMatch>DENY</OnMatch>
+    </turboFilter> -->
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <prudent>true</prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{yyyyMMdd HH:mm:ss} [%-5p] %C.%M:%L : %ex{full}%m%n %caller{2}%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- <pattern>%d{yyyyMMdd HH:mm:ss} [%-5p] %C.%M:%L :  %ex{full}%m%n %caller{2}%n</pattern> -->
+            <pattern>%d{yyyyMMdd HH:mm:ss} [%-5p] %C.%M:%L : %ex{full}%m%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="DEBUG">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
+

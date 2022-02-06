@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form id="form" method="POST" style="display:none"></form>
+<script src="/resources/js/jquery-1.11.1.min.js"></script>
+<script>
+    (function() {
+        var param = null;
+        var request = {
+            get: function(key) {
+                var i, cnt, search, arr, pair;
+                if (!param) {
+                    param = {};
+                    search = location.search.substr(1);
+                    arr = search.split("&");
+                    for (i = 0, cnt = arr.length; i < cnt; i++) {
+                        pair = arr[i].split("=");
+                        param[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+                    }
+                }
+                return param[key];
+            }
+        };
+
+        window.onload = function() {
+            var form = $("#form"),
+                storageKey = request.get("storageKey"),
+                redirectUrl = request.get("redirectUrl"),
+                postData = $.parseJSON(localStorage.getItem(storageKey)),
+                key;
+            form.attr("action", redirectUrl);
+            for (key in postData) {
+                if (postData.hasOwnProperty(key)) {
+                    form.append('<textarea name="' + key + '">' + postData[key] + '</textarea>');
+                }
+            }
+            localStorage.removeItem(storageKey);
+            form.submit();
+        };
+    })();
+</script>
+</body>
+</html>

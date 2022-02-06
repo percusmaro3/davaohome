@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../davaohome-admin/davaohome-admin.iml" filepath="$PROJECT_DIR$/../davaohome-admin/davaohome-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/davaohome-bo.iml" filepath="$PROJECT_DIR$/davaohome-bo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../davaohome-web/davaohome-web.iml" filepath="$PROJECT_DIR$/../davaohome-web/davaohome-web.iml" />
+    </modules>
+  </component>
+</project>

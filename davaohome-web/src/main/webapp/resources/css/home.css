@@ -1,0 +1,52 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{padding:0; margin:0;}
+body{margin:0 auto; font-family: "Nanum Gothic", sans-serif;}
+a{text-decoration:none;}
+img{border:0;}
+ul{list-style:none;}
+body *:not(.scroll_image>img){transition-property:all; transition-duration:1s;
+font-size:18px; color:#042e47}
+
+
+.home{width:100%}
+.home>div{padding:60px 0;}
+
+/*************이유**************/
+.reason_wrap{position:relative; max-width:1200px; margin:0 auto;}
+.reason_wrap>img{width:100%; padding-bottom:30px}
+.reason_tit{text-align:center}
+.reason_tit>h1{padding-top:8px}
+
+.reason{max-width:1200px; margin:30px auto;}
+.reason:last-child{margin:0 auto;}
+.reason>p{color:#042e47; font-size:14px; margin:5px 0;}
+.reason>img{width:100%; margin:10px 0;}
+
+.reason_table{max-width:1200px;}
+.reason_table>ul{overflow:hidden}
+.reason_table>ul>li{width:16.66666%; float:left;}
+.reason_table>ul>li:first-child{width:50%}
+
+.reason_table2{max-width:1200px;}
+.reason_table2>ul{overflow:hidden}
+.reason_table2>ul>li{float:left; width:25%;}
+
+
+/*************부동산소개*************/
+.introduce_wrap{position:relative; width:100%; background:#e9eef0; text-align:center;}
+.introduce{max-width:1200px; margin:0 auto;}
+.introduce>ul{width:100%; overflow:hidden; padding-top:30px;}
+.introduce>ul>li{width:30%; margin-right:5%; float:left;}
+.introduce>ul>li:last-child{margin-right:0px;}
+.introduce>ul>li>a{display:block}
+.introduce>ul>li>a>img{width:100%}
+
+/*************새소식**************/
+.news{position:relative; max-width:1200px; margin:0 auto; text-align:center;}
+.news_table{max-width:1200px; margin:0 auto; padding:20px}
+.news_table>ul{width:90%; overflow:hidden; margin: 0 auto; text-align:left; padding-left:20px}
+.news_table>ul>li{float:left; border-bottom:1px solid #dfe7eb; padding:7px 0; color:#042e47; font-size:14px;}
+.news_date{width:35%; text-align:center;}
+.news_tit{width:65%; font-weight:bold; cursor:pointer}
+.news_tit_detail{width:65%; font-weight:bold;}
+.news_body{width:65%; }

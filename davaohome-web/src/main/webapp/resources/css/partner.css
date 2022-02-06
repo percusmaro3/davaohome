@@ -1,0 +1,9 @@
+.partner_wrap{width:100%; max-width:1200px; margin:0 auto; padding:60px 0;}
+
+.partner_wrap>ul{overflow:hidden; border-bottom: 1px solid #dfe7eb}
+.partner_wrap>ul>li{float:left; padding:20px 0;}
+.partner_logo{width:20%; text-align:center; }
+.partner_logo>img{width:80%; vertical-align:middle; min-width:164px;}
+.partner_intro{width:78%; padding-left:2%; text-align:left; padding-top:10px}
+
+

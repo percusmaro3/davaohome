@@ -1,0 +1,201 @@
+
+
+@media screen and (max-width: 1180px){
+	#header{
+		width:100%;
+		padding:15px 2%;
+		box-sizing:border-box;
+		border-bottom:1px solid #fff;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:9;
+		display:inline-block;
+		min-width:100%;
+		overflow-x:hidden;
+		
+	}
+	
+	
+	#header .inner{
+		width:100%;
+		margin:0 auto;
+	}
+	
+	
+	#header .logo{
+		width:200px;
+		display:inline-block;
+	}
+	
+	#header .logo img{
+		width:100%;
+	}
+	
+	#header .gnb{
+		display:none;
+	}
+	
+	
+	#header .rightMenu{
+		display:none;
+	}
+	
+	
+	
+		
+	#header .inner .moMenu{
+		width:30px;
+		display:inline-block;
+		float:right;
+		margin-top:1em;
+	}
+	
+	
+	#header .inner .moMenu img{
+		width:100%;
+	}
+	
+	
+	.langDropArea{
+		display:none;
+	}
+	
+	
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 375px){
+	#header{
+		width:100%;
+		padding:15px 2%;
+		box-sizing:border-box;
+		border-bottom:1px solid #fff;
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:9;
+		display:inline-block;
+		min-width:100%;
+		overflow-x:hidden;
+		
+	}
+	
+	
+	#header .inner{
+		width:100%;
+		margin:0 auto;
+	}
+	
+	
+	#header .logo{
+		width:170px;
+		display:inline-block;
+	}
+	
+	#header .logo img{
+		width:100%;
+	}
+	
+	#header .gnb{
+		display:none;
+	}
+	
+	
+	#header .rightMenu{
+		display:none;
+	}
+	
+	
+	
+		
+	#header .inner .moMenu{
+		width:30px;
+		display:inline-block;
+		float:right;
+		margin-top:0.6em;
+	}
+	
+	
+	#header .inner .moMenu img{
+		width:100%;
+	}
+	
+	
+	.langDropArea{
+		display:none;
+	}
+	
+	
+
+}
+
+
+
+
+@media screen and (max-width: 1180px){
+
+#footer{
+	width:100%;
+	background:#000;
+	padding:2em 3%;
+	box-sizing:Border-box;
+	position:absolute;
+	bottom:0;
+	min-width:100%;
+	overflow-x:hidden;
+}
+
+#footer .copy{
+	width:100%;
+	display:inline-block;
+	vertical-align:middle;
+	color:#fff;
+	text-align:Center;
+}
+
+
+
+#footer .footMenu{
+	display:none;
+}
+
+#footer .footMenu li{
+	display:inline-block;
+	font-size:14px;
+	color:#fff;
+	border-right:1px solid #fff;
+	padding:0px 20px;
+	cursor:pointer;
+}
+
+#footer .footMenu li:last-child{
+	border-right:0px solid #fff;
+	padding:0px 0px 0px 20px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+#main #footer{
+	display:none;
+} 
+
+
+
+}

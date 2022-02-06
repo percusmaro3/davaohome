@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+*{padding:0; margin:0;}
+body{margin:0 auto; font-family: "Nanum Gothic", sans-serif;}
+a{text-decoration:none;}
+img{border:0;}
+ul{list-style:none;}
+body *:not(.scroll_image>img){transition-property:all; transition-duration:1s;
+font-size:18px; color:#042e47}
+
+/*공통-타이틀*/
+
+.table_text{font-size:12px; color:#042e47;text-align:left;}
+.small_text{font-size:12px; color:#042e47;}
+.emp{color:#e66900; font-weight:bold;}
+
+.main{width:100%}
+/*************내용**************/ 
+.list{max-width:1200px; margin:0 auto; padding-top:50px; padding-bottom:80px;}
+
+.list>img{width:100%; padding-top:20px;}
+.list_table{width:100%; margin-bottom:7px;}
+.list_table>ul{overflow:hidden;}
+.list_table>ul>li{width:25%; float:left;}
+.high{padding:16px 0!important;}
+
+.cont01{max-width:1200px; margin:0 auto; padding:60px 0;}
+.cont01>img{width:100%; margin-bottom:15px}
+
+.cont_list{width:100%; background:#ebe4cf; padding:12px 0;}
+.cont_list>ul{width:95%; overflow:hidden; margin:0 auto}
+.cont_list>ul>li{width:50%; float:left; font-size:15px; color:#042e47}
+
+.inner_picture{width:100%; overflow:hidden; padding:0PX;}
+.inner_picture>li{position:relative; width:50%; float:left;}
+.inner_picture>li>img{width:95%}
+.pic_even{text-align:right}
+
+.inner_picture2{width:100%; overflow:hidden; padding:0PX;}
+.inner_picture2>li{position:relative; width:33.333%; float:left;}
+.inner_picture2>li>img{width:95%}
+/*사진 3개 일반사이즈*/
+
+.inner_floor{width:100%; overflow:hidden;  padding:0PX;}
+.inner_floor>li{position:relative; width:50%; float:left; text-align:center}
+.inner_floor>li>img{width:60%; margin:0 auto}
+
+.inner_floor2{width:100%; overflow:hidden;  padding:0PX;}
+.inner_floor2>li{position:relative; width:33.333%; float:left; text-align:center}
+.inner_floor2>li>img{width:80%; margin:0 auto}
+/*사진 3개 작은사이즈*/
+
+.cont01_in{padding:15px 0;}
+
+/* 부동산 리스트 공통*/
+.tab_cont_wrap{position:relative; max-width:1200px; width:100%; margin:80px auto;}
+
+.tab{width:100%; overflow:hidden}
+.tab>li{width:50%; float:left; text-align:center; padding:15px 0; cursor:pointer}
+.tab>li:first-child{background:#e66900; color:white}
+.tab>li:last-child{background:#ebe4cf; color:#042e47}
+
+.tab_cont{position:relative; max-width:1200px; width:100%;background:#e66900; }
+.tab_cont_in{max-width:1160px; margin:0 auto; background:white;}
+.tab_cont_in>div{width:100%; text-align:center; overflow:hidden; border-bottom:20px solid #e66900}
+.tab_cont_in>div>img{ width:80%; margin:0 auto}
+.tab_cont_in>div:first-child{display:block}
+.tab_cont>div:last-child{display:none;}
+.tab_cont>div:last-child>iframe{margin:0 auto}
+
+

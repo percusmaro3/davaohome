@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="faq">
+
+    <insert id="insertFaq" parameterType="com.davaohome.bo.model.faq.Faq">
+        INSERT INTO faq (activeYn, registerDate, updateDate, lastUpdater)
+        VALUES ( #{activeYn}, #{now}, #{now}, #{lastUpdater} )
+        <selectKey keyProperty="faqNo" resultType="java.lang.Integer">
+            SELECT last_insert_id();
+        </selectKey>
+    </insert>
+
+    <insert id="insertFaqContents" parameterType="com.davaohome.bo.model.faq.FaqContents">
+        INSERT INTO faqContents (faqNo, language, question, answer)
+        VALUES (
+        #{faqNo}, #{language}, #{question}, #{answer}
+        )
+    </insert>
+
+    <insert id="insertQuestion" parameterType="com.davaohome.bo.model.faq.Question">
+        INSERT INTO question (userName, userEmail, question, sendResult, registerDate)
+        VALUES (
+          #{userName}, #{userEmail}, #{question}, #{sendResult}, now()
+        )
+    </insert>
+
+    <delete id="deleteFaqContents" parameterType="java.lang.Integer">
+        DELETE FROM faqContents
+        WHERE faqNo = #{faqNo}
+    </delete>
+
+    <update id="updateFaq" parameterType="com.davaohome.bo.model.faq.Faq">
+        UPDATE faq
+        SET
+        activeYn = #{activeYn},
+        updateDate = #{now},
+        lastUpdater = #{lastUpdater}
+        WHERE
+        faqNo = #{faqNo}
+    </update>
+
+    <update id="updateFaqCountryContents" parameterType="com.davaohome.bo.model.faq.FaqContents">
+        UPDATE faqContents
+        SET
+        language = #{language},
+        question = #{question},
+        answer = #{answer}
+        WHERE
+        faqNo = #{faqNo}
+    </update>
+
+    <select id="getFaq" parameterType="java.lang.Integer" resultType="com.davaohome.bo.model.faq.Faq">
+        SELECT *
+        FROM faq
+        WHERE faqNo = #{faqNo}
+    </select>
+
+    <select id="getFaqContents" parameterType="java.lang.Integer" resultType="com.davaohome.bo.model.faq.FaqContents">
+        SELECT *
+        FROM faqContents
+        WHERE faqNo = #{faqNo}
+    </select>
+
+    <select id="getFaqWithLanguage" resultType="com.davaohome.bo.model.faq.FaqSingleContents">
+        SELECT *
+        FROM faq a, faqContents b
+        WHERE a.faqNo = b.faqNo AND a.faqNo = #{faqNo}
+        AND b.language = #{language}
+    </select>
+
+    <select id="getFaqList" parameterType="com.davaohome.bo.model.faq.FaqSearchParam"
+            resultType="com.davaohome.bo.model.faq.FaqSingleContents">
+        SELECT a.*, b.*
+        FROM faq a, faqContents b
+        WHERE a.faqNo = b.faqNo
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(language)">
+            AND b.language = #{language}
+        </if>
+        ORDER BY a.updateDate DESC
+        <if test="fetchCount != null">
+            LIMIT #{startRowIndex}, #{fetchCount}
+        </if>
+    </select>
+
+    <select id="getFaqListCount" parameterType="com.davaohome.bo.model.faq.FaqSearchParam" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM faq a, faqContents b
+        WHERE a.faqNo = b.faqNo
+        <if test="@org.apache.commons.lang3.StringUtils@isNotEmpty(language)">
+            AND b.language = #{language}
+        </if>
+    </select>
+
+
+</mapper>
